@@ -1,4 +1,57 @@
-.bg{
-  background-image: url('./img/mars_bg.jpg') center center no-repeat;
+body{
+  font-family: 'Space Mono', monospace;
+}
+
+.bg__mars{
+  background: url('./img/mars_bg.jpg') center center no-repeat;
   background-size: cover;
+  color: #e7dede;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container{
+  height: 75%;
+  width: 80%;
+  padding: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgba(50, 40, 40, 0.4);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title-container{
+  text-align: center;
+  flex-basis: auto;
+  margin: 15px auto;
+}
+
+.content-container{
+  /* background-color: rgb(37, 68, 98); */
+  display: flex;
+}
+
+.form-component{
+  /* background-color: rgb(71, 99, 92); */
+  flex-grow: 0.1;
+}
+
+.gallery-component{
+  /* background-color: rgb(63, 48, 70); */
+  flex-grow: 10;
+}
+
+legend{
+  padding: 0.6rem;
+  background-color: rgba(50, 40, 40, 0.6);
+  border-radius: 10px;
+  text-align: center;
+}
+
+input{
+  margin: 0.8rem;
 }
