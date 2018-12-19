@@ -11,7 +11,8 @@ class Gallery extends Component {
 
     componentDidUpdate(prevProps){
         if(this.props.data !== prevProps.data){
-            console.log(Object.keys(this.props.data));
+            console.log(Object.keys(this.props.data.photos));
+            console.log(this.props.data.photos);
             /* this.props.data.forEach(
                 this.setState(prevState => ({
                     images: [...prevState.images, this.data.photos.img_src]
@@ -35,7 +36,6 @@ class Gallery extends Component {
         return(
             <div className="gallery-component">
                 <div className="row">
-                    <p>Gallery</p>
                     {photos && <Image img_src={photos}/>}
                 </div>             
             </div>

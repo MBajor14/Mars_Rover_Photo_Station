@@ -17,7 +17,6 @@ class App extends Component{
     event.preventDefault();
     const rover_name = 'curiosity';//event.target.elements.rover.value;
     const date = event.target.elements.date.value;
-    console.log(rover_name);
     const api_call = await fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/${rover_name}/photos?earth_date=2018-9-3&api_key=${API_KEY}`);
     const data = await api_call.json();
     this.setState({data: data});
