@@ -1,0 +1,15 @@
+body {
+  font-family: 'Space Mono', monospace; }
+
+.app {
+  color: #e7dede;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.bg__mars {
+  background: url("../img/mars_bg.jpg") center center no-repeat;
+  background-size: cover; }
+
+/*# sourceMappingURL=style.css.map */

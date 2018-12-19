@@ -1,16 +1,6 @@
-body{
-  font-family: 'Space Mono', monospace;
-}
 
-.bg__mars{
-  background: url('./img/mars_bg.jpg') center center no-repeat;
-  background-size: cover;
-  color: #e7dede;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
+
 
 .main-container{
   height: 75%;
