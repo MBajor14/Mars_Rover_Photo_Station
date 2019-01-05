@@ -1,0 +1,17 @@
+.form-component{
+    // background-color: rgb(71, 99, 92);
+    flex: 1 1 auto;
+    margin: auto auto;
+    padding-top: 30px;
+}
+
+legend{
+    padding: 0.6rem;
+    background-color: rgba(50, 40, 40, 0.6);
+    border-radius: 10px;
+    text-align: center;
+}
+  
+input{
+    margin: 0.8rem;
+}

@@ -24,8 +24,14 @@ class App extends Component{
 
   render(){
     return(
-      <div className="app bg__mars">
-        
+      <div className="app bg_mars">
+          <div className="main-container">
+            <div className="title-container">
+              <Title />
+              <Form handleSubmit={this.handleSubmit} />
+            </div>
+            <Gallery data={this.state.data} />
+          </div>
       </div>
     );
   };

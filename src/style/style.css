@@ -1,3 +1,30 @@
+.title-container {
+  text-align: center;
+  flex-basis: auto;
+  margin: 15px auto;
+  width: 40%;
+  display: flex;
+  flex-direction: column; }
+
+.form-component {
+  flex: 1 1 auto;
+  margin: auto auto;
+  padding-top: 30px; }
+
+legend {
+  padding: 0.6rem;
+  background-color: rgba(50, 40, 40, 0.6);
+  border-radius: 10px;
+  text-align: center; }
+
+input {
+  margin: 0.8rem; }
+
+.gallery-component {
+  background-color: #3f3046;
+  flex-grow: 10;
+  margin-left: 40px; }
+
 body {
   font-family: 'Space Mono', monospace; }
 
@@ -8,8 +35,23 @@ body {
   align-items: center;
   justify-content: center; }
 
-.bg__mars {
+.bg_mars {
   background: url("../img/mars_bg.jpg") center center no-repeat;
   background-size: cover; }
+
+.main-container {
+  height: 75%;
+  width: 80%;
+  padding: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: rgba(50, 40, 40, 0.4);
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row; }
+
+.content-container {
+  background-color: #254462;
+  display: flex; }
 
 /*# sourceMappingURL=style.css.map */

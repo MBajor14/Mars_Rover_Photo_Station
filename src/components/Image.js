@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Image = props => (
     <div className="col-md-3">
@@ -7,5 +8,13 @@ const Image = props => (
         </a>
     </div>
 );
+
+// Image.defaultProps = {
+//     img_src: null
+// }
+
+// Image.propTypes = {
+//     img_src: PropTypes.any.isRequired
+// }
 
 export default Image;
