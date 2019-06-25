@@ -5,24 +5,28 @@ const Form = props => (
         <form onSubmit={props.handleSubmit}>
             <fieldset>
                 <legend>Choose a rover</legend>
-                <div>
-                    <input type="radio" value="curiosity" id="curiosity" name="rover"/>
-                    <label htmlFor="curiosity">Curiosity</label>
-                </div>
-                <div>
-                    <input type="radio" value="opportunity" id="opportunity" name="rover"/>
-                    <label htmlFor="opportunity">Opportunity</label>
-                </div>
-                <div>
-                    <input type="radio" value="spirit" id="spirit" name="rover"/>
-                    <label htmlFor="spirit">Spirit</label>
-                </div>
-                <div>
-                    <input type="date" value="date" name="date"/>
-                    <label htmlFor="date">Date</label>
-                </div> 
-                <div>
-                    <button>Get Pictures</button>
+                <div className="form-body">
+                    <div className="form-inputs">
+                        <div>
+                            <input type="radio" value="curiosity" id="curiosity" name="rover"/>
+                            <label htmlFor="curiosity">Curiosity</label>
+                        </div>
+                        <div>
+                            <input type="radio" value="opportunity" id="opportunity" name="rover"/>
+                            <label htmlFor="opportunity">Opportunity</label>
+                        </div>
+                        <div>
+                            <input type="radio" value="spirit" id="spirit" name="rover"/>
+                            <label htmlFor="spirit">Spirit</label>
+                        </div>
+                        <div>
+                            <input type="date" value="date" name="date"/>
+                            {/*<label htmlFor="date">Date</label>*/}
+                        </div>
+                    </div>
+                    <div>
+                        <button> > </button>
+                    </div>
                 </div>
             </fieldset>
         </form>

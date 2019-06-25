@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+
+
 const Image = props => (
     <div className="col-md-3">
         <a href={props.img_src}>
@@ -9,12 +11,12 @@ const Image = props => (
     </div>
 );
 
-// Image.defaultProps = {
-//     img_src: null
-// }
+Image.defaultProps = {
+    img_src: null
+}
 
-// Image.propTypes = {
-//     img_src: PropTypes.any.isRequired
-// }
+Image.propTypes = {
+    img_src: PropTypes.any.isRequired
+}
 
 export default Image;
