@@ -3,6 +3,7 @@ import Title from './components/Title';
 import Form from './components/Form';
 import Gallery from './components/Gallery';
 import UI_Mount_Pair from './components/ui_decorations/UI_Mount_Pair';
+import UI_Bracket_Pair from './components/ui_decorations/UI_Bracket_Pair';
 
 const API_KEY = 'jgK3mGLNeRRwtX4Ml9VWaaWvzigyZo3PZ3FUTr0s';
 
@@ -28,6 +29,7 @@ class App extends Component{
   render(){
     return(
       <div className="app bg_mars">
+          <UI_Bracket_Pair />
           <div className="main-container">
             <UI_Mount_Pair />
             <div className="title-container">

@@ -107,4 +107,14 @@ body {
   box-shadow: #cffdff 0 0 2px 2px;
 }
 
+.ui_brackets_left {
+  width: 20px;
+  height: 20px;
+}
+.ui_brackets_left .ui_bracket {
+  color: purple;
+  width: 20px;
+  height: 20px;
+}
+
 /*# sourceMappingURL=style.css.map */
