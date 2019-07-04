@@ -1,4 +1,6 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronRight} from '@fortawesome/free-solid-svg-icons';
 
 const Form = props => (
     <div className="form-component">
@@ -25,7 +27,9 @@ const Form = props => (
                         </div>
                     </div>
                     <div>
-                        <button> > </button>
+                        <button>
+                            <FontAwesomeIcon icon={faChevronRight}/>
+                        </button>
                     </div>
                 </div>
             </fieldset>
