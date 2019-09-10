@@ -1,8 +1,9 @@
 import React from 'react';
+import './Thumbnail.css';
 
 const Thumbnail = props => (
-    <div>
-        <img src="" alt=""/>
+    <div className="thumbnail col-2">
+        <img src={props.img_src} alt=""/>
     </div>
 );
 

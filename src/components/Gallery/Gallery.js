@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Image from '../Thumbnail/Thumbnail';
+import Thumbnail from '../Thumbnail/Thumbnail';
 
 class Gallery extends Component {
     constructor(props){
@@ -11,33 +11,32 @@ class Gallery extends Component {
 
     componentDidUpdate(prevProps){
         if(this.props.data !== prevProps.data){
-            console.log(Object.keys(this.props.data.photos));
-            console.log(this.props.data.photos);
-            /* this.props.data.forEach(
-                this.setState(prevState => ({
-                    images: [...prevState.images, this.data.photos.img_src]
-                }))
-            ); */
+            const photos = Object.values(this.props.data)[0];
+            const newImages = [];
+            console.table(photos);
+            photos.forEach(photo => {
+                // if(photo.camera.id === 20)
+                    newImages.push({
+                        id: photo.id,
+                        img_src: photo.img_src
+                    });
+            });
+            this.setState({ images: newImages });
         }
     }
 
-    // Add image lightbox eventually
-    renderImage = (imageUrl) => {
-        return(
-            <Image img_src={imageUrl}/>
-        );
+    renderImages = (images) => {
+        return images.map(image => <Thumbnail key={image.id} img_src={image.img_src} />);
     };
 
     render(){
-        const data = this.props.data;
-        const count = Object.keys(data).length;
-        const photos = count > 0 ? data.photos[0].img_src : null;
+        const { images } = this.state;
 
         return(
-            <div className="gallery-component">
-                <div className="row">
-                    {photos && <Image img_src={photos}/>}
-                </div>
+            <div className="row overflow-auto">
+                {
+                    images && this.renderImages(images)
+                }
             </div>
         );
     };

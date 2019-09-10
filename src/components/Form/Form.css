@@ -1,0 +1,19 @@
+.btn:focus, .btn.focus {
+    outline: 0;
+    box-shadow: none;
+}
+
+#curiosityBtn:hover {
+    background-color: rgba(200,255,200,0.5);
+}
+#curiosityBtn:hover #opportunityBtn {
+    color: grey;
+}
+
+#opportunityBtn:hover{
+    background-color: rgba(200,200,255,0.5);
+}
+
+#spiritBtn:hover{
+    background-color: rgba(255,255,200,0.5);
+}
