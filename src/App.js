@@ -9,20 +9,25 @@ class App extends Component{
     super(props);
     this.state = {
       data: [],
-      selectedRover: "Curiosity"
+      selectedRover: null,
+      rovers: null
     }
   };
 
   componentDidMount() {
     // fetch(`https://api.nasa.gov/planetary/apod?api_key=${API_KEY}`)
-    fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity?api_key=${API_KEY}`)
+    fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers?api_key=${API_KEY}`)
         .then(response => response.json())
         .then(data => {
-          console.log(data)
-          this.setState({selectedRover: data.rover})
+          console.log(data);
+          this.setState({
+            selectedRover: data.rovers[0],
+            rovers: data.rovers
+          });
         })
         .catch(error => { throw new Error(error) });
   }
+
 
 //https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?earth_date=2015-6-3&api_key=jgK3mGLNeRRwtX4Ml9VWaaWvzigyZo3PZ3FUTr0s
   handleSubmit = async event => {
@@ -38,17 +43,23 @@ class App extends Component{
     this.setState({data: data});
   };
 
-  handleSelect = (roverName) => {
-
+  roverSelect = (roverID) => {
+    const { rovers } = this.state;
+    if(rovers && (rovers.id !== roverID)){
+      const newSelectedRover = this.state.rovers.find(rover => rover.id === roverID);
+      this.setState({ selectedRover: newSelectedRover });
+    }
   };
 
   render(){
     return(
       <div className="app bg_mars d-flex justify-content-center align-items-center">
           <div className="main-container d-flex flex-column text-white p-4">
-            <h1 className="text-center mt-3">Welcome To The Mars Rover Gallery</h1>
-            <Form handleSubmit={this.handleSubmit} handleSelect={this.handleSelect} selectedRover={this.state.selectedRover}/>
-            <Gallery data={this.state.data} />
+            <h1 className="text-center mt-3">Mars Rover Gallery</h1>
+            <Form handleSubmit={this.handleSubmit} handleSelect={(roverID) => this.roverSelect(roverID)} selectedRover={this.state.selectedRover}/>
+            {
+              this.state.data && <Gallery data={this.state.data} />
+            }
           </div>
       </div>
     );
